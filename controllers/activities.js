@@ -3,18 +3,16 @@ const knex = require("../db/knex.js");
 module.exports = {
   // CHANGE ME TO AN ACTUAL FUNCTION
   home: (req,res) =>{
-    res.render('home');
+    if(!req.session){
+      req.session = [];
+      res.render("home")
+    }else{
+      console.log(req.session)
+       res.render('home');
+     }
   },
   login: function(req, res) {
-    knex('users')
-      .where('email', req.body.email)
-      .then((x) => {
-        let users = x[0]
-        if (users.password == req.body.password) {
-          req.sessions.users_id = users.id;
-          req.session.save(() => res.redirect('/landing'))
-        } res.redirect("login");
-      })
+    res.render('login')
   },
   landing: function(req, res) {
     res.render("landing");
@@ -52,5 +50,16 @@ module.exports = {
     }else{
       console.log("Password doesnt match");
     }
+  },
+  confirmLogin: (req,res) => {
+    knex('users')
+      .where('email', req.body.email)
+      .then((x) => {
+        let users = x[0]
+        if (users.password == req.body.password) {
+          req.session.users_id = users.id;
+          req.session.save(() => res.redirect('/landing'))
+        } res.redirect("login");
+      })
   }
 }

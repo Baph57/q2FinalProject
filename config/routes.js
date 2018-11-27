@@ -8,5 +8,6 @@ module.exports = function(app){
   app.get('/profile:id', activities.profile);
   app.get('/create', activities.create);
   app.get('/delete:id', activities.delete);
-  app.get('/edit:id', activities.edit)
+  app.get('/edit:id', activities.edit);
+  app.post('/newRegister', activities.newRegister)
 }

@@ -11,8 +11,9 @@ app.use(express.static(path.join(__dirname + "/views")));
 
 
 app.set('view engine', 'ejs');
-
+require('./config/sessions.js');
 var routes_setter = require('./config/routes.js');
+
 routes_setter(app);
 
 app.listen(port, function() {

@@ -20,9 +20,6 @@ module.exports = {
   edit: function(req, res) {
     res.render("edit");
   },
-  profile: function(req, res) {
-    res.render("profile");
-  },
   register: function(req, res) {
     res.render("register");
   }

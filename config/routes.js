@@ -1,7 +1,7 @@
 //Update the name of the controller below and rename the file.
-const template = require("../controllers/template.js")
+const activities = require("../controllers/activities.js")
 module.exports = function(app){
 
-  app.get('/', template.index);
+  app.get('/', activities.index);
 
 }

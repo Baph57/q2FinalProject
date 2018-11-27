@@ -25,5 +25,21 @@ module.exports = {
   },
   register: function(req, res) {
     res.render("register");
+  },
+  newRegister: (req,res) => {
+    if(req.body.password === req.body.confirm_password){
+      knex('users').insert({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        points: 0,
+        challenges_completed: 0,
+        challenges_attempted:0
+      }).then(()=>{
+        res.redirect("/login")
+      })
+    }else{
+      console.log("Password doesnt match");
+    }
   }
 }

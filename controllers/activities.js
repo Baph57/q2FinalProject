@@ -4,12 +4,12 @@ module.exports = {
   // CHANGE ME TO AN ACTUAL FUNCTION
   // render home page, check if user has session if not create
   home: (req,res) =>{
-    if(!req.sessions){
-      req.sessions = [];
-      console.log(req.sessions);
+    if(!req.session){
+      req.session = [];
+      console.log(req.session);
       res.render("home")
     }else{
-      console.log(req.sessions)
+      console.log(req.session)
        res.render('home');
      }
   },
@@ -65,13 +65,16 @@ module.exports = {
       .where('email', req.body.email)
       .then( (x) => {
         let users = x[0]
-        console.log(users);
-        console.log(req.body);
-        console.log(req.sessions);
+        console.log(users.password);
+        console.log(req.body.password);
+
         if (users.password == req.body.password) {
-          req.sessions.user_id = users.id;
-          req.session.save(() => res.redirect('/landing'))
-        } res.redirect("login");
+          req.session.users_id = users.id;
+          console.log(req.session);
+          req.session.save(() => res.redirect("/landing"));
+        } else{
+          res.render("login")
+        };
       })
   }
 }

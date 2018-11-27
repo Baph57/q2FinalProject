@@ -6,13 +6,29 @@ module.exports = {
     res.render('home');
   },
   login: function(req, res) {
-    res.render("login");
+    knex('users')
+      .where('email', req.body.email)
+      .then((x) => {
+        let users = x[0]
+        if (users.password == req.body.password) {
+          req.sessions.users_id = users.id;
+          req.session.save(() => res.redirect('/landing'))
+        } res.redirect("login");
+      })
   },
   landing: function(req, res) {
     res.render("landing");
   },
-  profile: function(req, res) {
-    res.render("profile");
+  profile: (req, res) => {
+    knex('users')
+    .where('email', req.body.email)
+    .then((x) =>{
+      let users = x[0]
+      if(users.password == req.body.password){
+        req.sessions.users_id = users.id;
+        req.session.save(() => res.redirect('/landing'))
+      } res.render("profile");
+    })
   },
   create: function(req, res) {
     res.render("create");

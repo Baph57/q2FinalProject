@@ -65,13 +65,16 @@ module.exports = {
       .where('email', req.body.email)
       .then( (x) => {
         let users = x[0]
-        console.log(users);
-        console.log(req.body);
-        console.log(req.session);
+        console.log(users.password);
+        console.log(req.body.password);
+
         if (users.password == req.body.password) {
           req.session.users_id = users.id;
-          req.session.save(() => res.redirect('/landing'))
-        } res.redirect("login");
+          console.log(req.session);
+          req.session.save(() => res.redirect("/landing"));
+        } else{
+          res.render("login")
+        };
       })
   }
 }

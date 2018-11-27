@@ -9,5 +9,6 @@ module.exports = function(app){
   app.get('/create', activities.create);
   app.get('/delete:id', activities.delete);
   app.get('/edit:id', activities.edit);
-  app.post('/newRegister', activities.newRegister)
+  app.post('/newRegister', activities.newRegister);
+  app.post('/confirmLogin', activities.confirmLogin)
 }

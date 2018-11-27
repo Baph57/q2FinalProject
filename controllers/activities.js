@@ -4,12 +4,15 @@ module.exports = {
   // CHANGE ME TO AN ACTUAL FUNCTION
   // render home page, check if user has session if not create
   home: (req,res) =>{
+    // console.log("starter session",req.session);
     if(!req.session){
-      req.session = [];
-      console.log(req.session);
+      req.session = {};
       res.render("home")
+    }else if (req.session.users_id) {
+      // console.log("This console log",req.session.users_id);
+      res.render('landing')
     }else{
-      console.log(req.session)
+      // console.log("Else", req.session)
        res.render('home');
      }
   },

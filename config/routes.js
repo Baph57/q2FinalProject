@@ -5,7 +5,7 @@ module.exports = function(app){
   app.get('/login', activities.login);
   app.get('/register', activities.register);
   app.get('/landing:id', activities.landing);
-  app.get('/profile:id', activities.profile);
+  app.get('/profile', activities.profile); //id req.param needed?
   app.get('/create', activities.create);
   app.get('/delete:id', activities.delete);
   app.get('/edit:id', activities.edit);

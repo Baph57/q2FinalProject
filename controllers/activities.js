@@ -20,8 +20,7 @@ module.exports = {
     res.render("landing");
   },
   profile: (req, res) => {
-    knex('users')
-    .where()
+    res.render('profile')
   },
   create: function(req, res) {
     res.render("create");

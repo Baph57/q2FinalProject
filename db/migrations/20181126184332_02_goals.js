@@ -5,7 +5,11 @@ exports.up = function(knex, Promise) {
     table.string('activity');
     table.integer('accessibility');
     table.string('type');
-    table.integer('user_id').references('id').inTable('users').onDelete('CASCADE').index();
+    table.integer('user_id')
+      .references('id')
+      .inTable('users')
+      .onDelete('CASCADE')
+      .index();
     table.integer('key');
     table.timestamp(true,true)
   })

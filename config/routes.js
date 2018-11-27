@@ -3,5 +3,5 @@ const activities = require("../controllers/activities.js")
 module.exports = function(app){
 
   app.get('/', activities.login);
-
+  
 }

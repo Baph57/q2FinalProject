@@ -9,13 +9,13 @@ module.exports = function(app){
   });
 
 
-  app.use(session({
-      secret: 'keyboard cat',
-      cookie: {
-          maxAge: 259200000 // 30 days
-      },
-      resave: false,
-      saveUninitialized: false,
-      store: store
-  }));
+    app.use(session({
+        secret: 'keyboard cat',
+        cookie: {
+            maxAge: 259200000 // 30 days
+        },
+        resave: false,
+        saveUninitialized: false,
+        store: store
+    }));
 }

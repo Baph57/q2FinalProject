@@ -11,6 +11,7 @@
 }
 .col-9{
     background-color: darkslategray;
+    background-image: url("images/home-office.jpg")
 }
 img{
     height:200px;

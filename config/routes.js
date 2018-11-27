@@ -2,6 +2,6 @@
 const activities = require("../controllers/activities.js")
 module.exports = function(app){
 
-  app.get('/', activities.index);
+  app.get('/', activities.login);
 
 }

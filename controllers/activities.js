@@ -26,6 +26,9 @@ module.exports = {
   create: function(req, res) {
     res.render("create");
   },
+  newCreate: (req, req) => {
+    //post request that handles user input
+  },
   delete: function(req, res) {
       res.render("delete");
     },

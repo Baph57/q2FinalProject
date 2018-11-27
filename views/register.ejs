@@ -2,10 +2,35 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>New User Registration</title>
+    <title>Login page</title>
+    <style media="screen">
+      *{
+        text-align: center;
+      }
+      a{
+      text-decoration: none; font: menu;
+      display: block; padding: 2em 8em;
+      background: blue;
+      color: white;
+      width:80%;
+      border-style: solid; border-width: 2em;
+  }
+  input{
+    margin: .5em;
+  }
+    </style>
   </head>
   <body>
-    <h1>Welcome to our site!</h1>
-    <p>To register please fill out the required information</p>
+    <h1>Quest Loot</h1>
+    <h3>We belive in simplifiying life by creating clear, <br> fun challenges to help our users make the most of everyday</h3>
+    <p>Register:</p>
+    <form action="/register" method="post">
+      <input type="string" name="name" placeholder="Name"> <br>
+      <input type="email" name="email" placeholder="Email"> <br>
+      <input type="password" name="password" placeholder="Password"> <br>
+      <input type="password" name="confirm_password" placeholder="Confirm Password"> <br>
+      <input type="submit" name="Submit" placeholder="Submit">
+    </form>
+    <a href="/login">Login</a> <br>
   </body>
 </html>

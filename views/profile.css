@@ -1,19 +1,96 @@
-.container-fluid{
+body{
     background-color: orange;
     width: 100vw;
     height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.container-fluid{
+    margin: 0 !important;
+}
+#navbar{
+    width: 98vw;
+    height: 5vh;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+#content{
+    width: 100vw;
+    height: 95vh;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 .row{
-    height: 100vh;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 .col-3{
-    background-color: blue;
+    background-color: yellow;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+#top3rd{
+    height: 33%;
+    width: 100%;
+    background-color: pink;
+    margin: 0px 0px !important;
+    padding: 2px !important;
+}
+#mid3rd{
+    height: 30%;
+    width: 100%;
+    background-color: purple;
+    margin: 20px 0px 0px 0px !important;
+    padding: 2px !important;
+}
+#bot3rd{
+    height: 33%;
+    width: 100%;
+    background-color: turquoise;
+    margin: 0 !important;
+    padding: 2px !important;
+}
+#barChart{
+    height: 100% !important;
+    width: 100% !important;
+}
+#lineChart{
+    height:100% !important;
+    width:100% !important;
+}
+th{
+    margin:0 !important;
+    border: 0 !important;
+}
+#horizontalBar{
+    width: 100% !important;
+}
+#carouselExampleControls{
+    width: 100% !important;
+}
+.col-6{
+    background-color: green;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.col-5{
+    background-color: teal;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 .col-9{
-    background-color: darkslategray;
-    background-image: url("images/home-office.jpg")
+    background-color: red;
+    padding: 0px !important;
+    margin: 0px !important;
 }
-img{
+#mainContent{
+    background-color: darkslategray;
+    height: 100%;
+    width: 90vw !important; 
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.funk{
     height:200px;
     width: 100%;
 }

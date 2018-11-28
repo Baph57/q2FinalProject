@@ -85,7 +85,8 @@ module.exports = {
       console.log(data[0]);
       res.render('options', {money: data[0]})
     })
-  compare: (req,res)=> {
+  },
+  compare:(req,res)=> {
     res.render('compairson');
   }
 }

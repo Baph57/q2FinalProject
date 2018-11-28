@@ -35,7 +35,7 @@ exports.seed = function(knex, Promise) {
           "Gone": 0,
           "Government": 35,
           user_id: 1
-          },
+          }
       ]);
     });
 };

@@ -26,7 +26,7 @@ module.exports = {
   },
   //render users profile
   profile: (req, res) => {
-    knex('budget').where("user_id", req.session.user_id).then((results)=>{
+    knex('budget').where("user_id", req.session.users_id).then((results)=>{
       res.render('profile', {money:results})
     })
   },
@@ -53,10 +53,7 @@ module.exports = {
       knex('users').insert({
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password,
-        points: 0,
-        challenges_completed: 0,
-        challenges_attempted:0
+        password: req.body.password
       }).then(()=>{
         res.redirect("/login")
       })

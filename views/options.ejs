@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Modify Your Data</title>
+  </head>
+  <body>
+    <h1>Modify Your data</h1>
+<form action="/editData" method="post">
+    <% for(let balance in money){ %>
+      
+      <input type="text" name="" value=" <%= money[balance] %>">
+    <%  } %>
+
+  </form>
+  </body>
+</html>

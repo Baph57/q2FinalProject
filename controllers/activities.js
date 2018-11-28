@@ -85,5 +85,11 @@ module.exports = {
       console.log(data[0]);
       res.render('options', {money: data[0]})
     })
+  },
+  editData: (req,res) =>{
+    console.log(req.body);
+    knex('budget').where('user_id', req.session.users_id).update(req.body).then(
+      res.render('profile')
+    )
   }
 }

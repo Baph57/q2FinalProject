@@ -26,7 +26,9 @@ module.exports = {
   },
   //render users profile
   profile: (req, res) => {
-    res.render('profile')
+    knex('budget').where("user_id", req.session.user_id).then((results)=>{
+      res.render('profile', {money:results})
+    })
   },
   //render page to create new objective
   create: function(req, res) {

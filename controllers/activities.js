@@ -79,5 +79,8 @@ module.exports = {
           res.render("login")
         };
       })
+  },
+  compare: (req,res)=> {
+    res.render('compairson');
   }
 }

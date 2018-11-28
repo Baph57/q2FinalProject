@@ -9,8 +9,13 @@ module.exports = function(app){
   app.get('/create', activities.create);
   app.get('/delete:id', activities.delete);
   app.get('/edit:id', activities.edit);
+  app.get('/options', activities.options);
   app.post('/newRegister', activities.newRegister);
-  app.post('/confirmLogin', activities.confirmLogin)
+  app.post('/confirmLogin', activities.confirmLogin);
+  app.post('/editData', activities.editData);
+  app.get('/compare',activities.compare)
+
+
   // app.use(auth)
 };
 var auth = (req, res, next) => {

@@ -10,7 +10,7 @@ module.exports = {
       res.render("home")
     }else if (req.session.users_id) {
       // console.log("This console log",req.session.users_id);
-      res.render('landing')
+      res.render('profile')
     }else{
       // console.log("Else", req.session)
       res.render('home');
@@ -74,10 +74,25 @@ module.exports = {
         if (users.password == req.body.password) {
           req.session.users_id = users.id;
           console.log(req.session);
-          req.session.save(() => res.redirect("/landing"));
+          req.session.save(() => res.render("profile"));
         } else{
           res.render("login")
         };
       })
+  },
+  options:(req,res)=>{
+    knex("budget").where("user_id", req.session.users_id).then((data)=>{
+      console.log(data[0]);
+      res.render('options', {money: data[0]})
+    })
+  },
+  editData: (req,res) =>{
+    console.log(req.body);
+    knex('budget').where('user_id', req.session.users_id).update(req.body).then(
+      res.render('profile')
+    )
+  },
+  compare:(req,res)=> {
+    res.render('compairson');
   }
 }

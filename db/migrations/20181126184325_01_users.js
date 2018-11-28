@@ -5,9 +5,6 @@ exports.up = function(knex, Promise) {
     table.string('name');
     table.string('email');
     table.string('password');
-    table.integer("points");
-    table.integer("challenges_completed");
-    table.integer('challenges_attempted');
     table.timestamps(true,true)
   })
 };

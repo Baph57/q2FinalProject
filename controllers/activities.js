@@ -91,5 +91,8 @@ module.exports = {
     knex('budget').where('user_id', req.session.users_id).update(req.body).then(
       res.render('profile')
     )
+  },
+  compare:(req,res)=> {
+    res.render('compairson');
   }
 }

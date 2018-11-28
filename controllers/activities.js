@@ -10,7 +10,7 @@ module.exports = {
       res.render("home")
     }else if (req.session.users_id) {
       // console.log("This console log",req.session.users_id);
-      res.render('landing')
+      res.render('profile')
     }else{
       // console.log("Else", req.session)
       res.render('home');
@@ -74,7 +74,7 @@ module.exports = {
         if (users.password == req.body.password) {
           req.session.users_id = users.id;
           console.log(req.session);
-          req.session.save(() => res.redirect("/landing"));
+          req.session.save(() => res.render("profile"));
         } else{
           res.render("login")
         };

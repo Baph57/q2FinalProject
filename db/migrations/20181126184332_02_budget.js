@@ -31,6 +31,9 @@ exports.up = function(knex, Promise) {
     table.float('total_income');
     table.float('total_expenses');
     table.float('tax_rate');
+    table.float('net_worth');
+    table.float('checking_acc_bal');
+    table.float('savings_acc_bal')
     table.integer('user_id')
       .references('id')
       .inTable('users')

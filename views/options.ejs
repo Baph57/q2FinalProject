@@ -3,14 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Modify Your Data</title>
+    <style media="screen">
+      *{
+      text-align: center;
+      }
+    </style>
   </head>
   <body>
     <h1>Modify Your data</h1>
 <form action="/editData" method="post">
-    <% for(let balance in money){ %>
-      
-      <input type="text" name="" value=" <%= money[balance] %>">
+    <% for(let i in money){ %>
+      <% if([i] == "id" || [i] == "created_at" || [i] == "updated_at" ||[i] == "user_id"){ %>
+        <%# do nothing  %>
+    <% }else{ %>
+        <p><%= [i] %></p>
+        <input type="number" name=<%= [i] %> value=<%= Number(money[i]) %> >
+        <%  } %>
     <%  } %>
+    <br> <input type="submit" name="" value="Submit">
 
   </form>
   </body>

@@ -79,5 +79,11 @@ module.exports = {
           res.render("login")
         };
       })
+  },
+  options:(req,res)=>{
+    knex("budget").where("user_id", req.session.users_id).then((data)=>{
+      console.log(data[0]);
+      res.render('options', {money: data[0]})
+    })
   }
 }

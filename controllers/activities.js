@@ -73,8 +73,13 @@ module.exports = {
 
         if (users.password == req.body.password) {
           req.session.users_id = users.id;
-          console.log(req.session);
-          req.session.save(() => res.render("profile"));
+          // console.log(req.session);
+          knex('budget')
+            .where(req.session.users_id == budget.user_id)
+            .then((x) => {req.session.data = x })
+            .then((y) =>{
+              req.session.save(() => res.render("profile", { results: y }))
+            });
         } else{
           res.render("login")
         };

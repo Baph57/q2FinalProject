@@ -21,6 +21,6 @@ module.exports = {
     )
   },
   compare:(req,res)=> {
-    res.render('compairson');
+    res.render('comparison');
   }
 }

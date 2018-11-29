@@ -52,12 +52,11 @@ module.exports = {
         if (users.password == req.body.password) {
           req.session.users_id = users.id;
           // console.log(req.session);
-          // knex('budget')
+          knex('budget')
+          .then(x =>{req.session.save(() => res.render("profile", { money : x }))})
           //   .where("user_id", req.session.users_id)
-          //   .then((x) => {req.session.data = x })
-          //   .then((y) =>{
+          // .then((x) => {req.session.data = x })
           //this didn't work cause y was undefined
-          req.session.save(() => res.render("bumper", { results: y }))
         }else{
           res.render("login")
         };

@@ -1,8 +1,7 @@
-const knex = require("../db/knex.js");
+const knex = require('../db/knex.js');
 
 module.exports = {
-  // CHANGE ME TO AN ACTUAL FUNCTION
-  // render home page, check if user has session if not create
+    // render home page, check if user has session if not create
   home: (req,res) =>{
     // console.log("starter session",req.session);
     if(!req.session){
@@ -20,30 +19,7 @@ module.exports = {
   login: function(req, res) {
     res.render('login')
   },
-  //render users landing page with objectives
-  landing: function(req, res) {
-    res.render("landing");
-  },
-  //render users profile
-  profile: (req, res) => {
-    knex('budget').where("user_id", req.session.users_id).then((results)=>{
-      res.render('profile', {money:results})
-    })
-  },
-  //render page to create new objective
-  create: function(req, res) {
-    res.render("create");
-  },
-  //post req to handle users input
-  newCreate: (req, res) => {
-    //post request that handles user input
-  },
-  delete: function(req, res) {
-      res.render("delete");
-    },
-  edit: function(req, res) {
-    res.render("edit");
-  },
+  // renders new user reg. page
   register: function(req, res) {
     res.render("register");
   },
@@ -84,19 +60,9 @@ module.exports = {
         };
       })
   },
-  options:(req,res)=>{
-    knex("budget").where("user_id", req.session.users_id).then((data)=>{
-      console.log(data[0]);
-      res.render('options', {money: data[0]})
-    })
-  },
-  editData: (req,res) =>{
-    console.log(req.body);
-    knex('budget').where('user_id', req.session.users_id).update(req.body).then(
-      res.render('profile')
-    )
-  },
-  compare:(req,res)=> {
-    res.render('compairson');
+  // deletes user session and returns user to login screen
+  logout: (req,res)=>{
+    req.session.destroy();
+    res.redirect('/login');
   }
 }

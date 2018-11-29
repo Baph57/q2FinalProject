@@ -57,8 +57,8 @@ module.exports = {
           //   .then((x) => {req.session.data = x })
           //   .then((y) =>{
           //this didn't work cause y was undefined
-          req.session.save(() => res.render("bumper", { results: y }))
-        }else{
+          req.session.save(() => res.render("bumper")
+        )}else{
           res.render("login")
         };
       })
@@ -70,7 +70,7 @@ module.exports = {
   },
   bumper: (req,res)=>{
     knex('budget').then(x => {res.render('bumper', {x : x})})
-    
+
     // .where("user_id", req.session.users_id)
     // .then((y) =>{req.session.save(() => res.render("bumper", { results: y }))
   // })

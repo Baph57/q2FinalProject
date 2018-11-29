@@ -1,14 +1,28 @@
+body{
+  background-color: gray;
+}
 .main{
+  position:absolute;
+  left:50vh;
   height:100vh;
   width:100vw;
-  background-color:lightgray;
+
 
   /* background-color: red; */
 }
 .container{
+
+  width:20%;
   background-color: gray;
-  margin:3vh;
+
   /* border:1px solid black; */
   display: flex;
   float:left;
+}
+.col-5{
+  text-align: center;
+  height:40vh;
+  /* display:flex;
+  float:left; */
+  margin: 2vh;
 }

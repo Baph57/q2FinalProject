@@ -52,13 +52,13 @@ module.exports = {
         if (users.password == req.body.password) {
           req.session.users_id = users.id;
           // console.log(req.session);
-          knex('budget')
-            .where("user_id", req.session.users_id)
-            .then((x) => {req.session.data = x })
-            .then((y) =>{
-              req.session.save(() => res.render("profile", { results: y }))
-            });
-        } else{
+          // knex('budget')
+          //   .where("user_id", req.session.users_id)
+          //   .then((x) => {req.session.data = x })
+          //   .then((y) =>{
+          //this didn't work cause y was undefined
+          req.session.save(() => res.render("bumper", { results: y }))
+        }else{
           res.render("login")
         };
       })
@@ -67,5 +67,12 @@ module.exports = {
   logout: (req,res)=>{
     req.session.destroy();
     res.redirect('/login');
+  },
+  bumper: (req,res)=>{
+    knex('budget').then(x => {res.render('bumper', {x : x})})
+    
+    // .where("user_id", req.session.users_id)
+    // .then((y) =>{req.session.save(() => res.render("bumper", { results: y }))
+  // })
   }
 }

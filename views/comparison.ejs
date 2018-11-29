@@ -40,7 +40,7 @@
 <div class="container">
 
 
-  <div class="col-5">
+  <div class="col-6">
 Recommended budget percentages by Dave Ramsey.
 
 <canvas id="doughnutChart"></canvas>
@@ -51,9 +51,9 @@ Recommended budget percentages by Dave Ramsey.
   var myLineChart = new Chart(ctxD, {
     type: 'doughnut',
     data: {
-      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+      labels: ["Everything Else", "Food", "Charity", "Savings", "Housing"],
       datasets: [{
-        data: [35, 10, 100, 40, 120],
+        data: [35, 10, 10, 15, 30],
         backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
         hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
       }]
@@ -70,7 +70,7 @@ Recommended budget percentages by Dave Ramsey.
 <div class="container">
 
 
-<div class="col-5">
+<div class="col-6">
 your working budget
 
 <canvas id="doughnutChart1"></canvas>
@@ -80,9 +80,9 @@ var ctxD = document.getElementById("doughnutChart1").getContext('2d');
 var myLineChart = new Chart(ctxD, {
   type: 'doughnut',
   data: {
-    labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+    labels: ["Everything Else", "Food", "Charity", "Savings", "Housing"],
     datasets: [{
-      data: [300, 50, 100, 40, 120],
+      data: [35, 10, 10, 15, 30],
       backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
       hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
     }]

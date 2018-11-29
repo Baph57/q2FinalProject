@@ -1,32 +1,21 @@
-<<<<<<< HEAD:views/compare.css
-body{
-  background-color: gray;
-}
-=======
 
->>>>>>> d8a65a71bb19fb28ae1f7dd8f7e15ac855e53d3a:views/css/compare.css
 .main{
   position:absolute;
-  left:50vh;
+  /* left:50vh; */
   height:100vh;
   width:100vw;
-
-
-  /* background-color: red; */
 }
 .container{
+  width:10vw;
 
-  width:20%;
-  background-color: gray;
 
-  /* border:1px solid black; */
-  display: flex;
-  float:left;
 }
 .col-5{
-  text-align: center;
+
   height:40vh;
-  /* display:flex;
-  float:left; */
-  margin: 2vh;
+margin-top:2vh;
+  margin-left:35vh;
+}
+#doughnutChart{
+
 }

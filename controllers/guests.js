@@ -37,6 +37,9 @@ module.exports = {
       console.log("Password doesnt match");
     }
   },
+  register2: (req,res) =>{
+    res.render('register2')
+  },
   // check if users email exisits, if exisits check if password matches, if matches save user data in sessions
   confirmLogin: (req,res) => {
     knex('users')

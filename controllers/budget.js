@@ -22,5 +22,13 @@ module.exports = {
   },
   compare:(req,res)=> {
     res.render('comparison');
+  },
+  //a new user inputs data
+  createData:(req,res)=>{
+    knex('budget').insert(req.body,{
+      user_id: req.session.users_id
+    }).then(
+      res.redirect("/profile")
+    )
   }
 }

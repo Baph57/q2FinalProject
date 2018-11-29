@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ProfiLeaderboard</title>
-  <link href="profile.css" rel="stylesheet" type="text/css">
+  <title>Budget Overview</title>
+  <link href="css/profile.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"crossorigin="anonymous"></script>
@@ -24,20 +24,27 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class='container-fluid' id='navbar'>
+  <nav class="navbar navbar-dark bg-dark">
+  <a class="nav-link active" href="#">Home</a>
+  <a class="nav-link" href="/options">Edit</a>
+  <a class="nav-link" href="/compare">Compare</a>
+  <a class="nav-link" href="/logout">Logout</a>
+</nav>
+  <!-- <div class='container-fluid' id='navbar'>
     <div class='row'>
         <table class="table table-dark" id='navbar'>
           <thead>
             <tr>
-              <th scope="col">Home</th>
-              <th scope="col">Options</th>
-              <th scope="col">Edit Values</th>
-              <th scope="col">About</th>
+              <a href="#">  <th scope="col">Home</th> </a>
+              <a href="#"> <th scope="col">Options</th> </a>
+              <a href="options"> <th scope="col">Edit Values</th> </a>
+              <a href="#"> <th scope="col">About</th> </a>
+              <a href="/logout"> <th scope="col" href="/logout">Log Out </th> </a>
             </tr>
           </thead>
-        </table>
-    </div>
-  </div>
+        </table> -->
+    <!-- </div>
+  </div> -->
   <div class='container-fluid' id='content'>
     <div class='row'>
       <div class='col-3'>
@@ -52,32 +59,24 @@
             <tr>
               <th scope="row">
               <canvas id="lineChart">
-                <script>
-                  //line
+
+              <script type="text/javascript">
+                  const money = [1,1,1,1,1,1,1,1,1,1];
+                  let monthlyIncomeArr =  [];
+                  console.log(results);
                   var ctxL = document.getElementById("lineChart").getContext('2d');
                   var myLineChart = new Chart(ctxL, {
                     type: 'line',
                     data: {
                       labels: ["January", "February", "March", "April", "May", "June", "July"],
                       datasets: [{
-                        label: "My First dataset",
-                        data: [money[Monthly_Income], 59, 80, 81, 56, 55, 40],
+                        label: "Monthly Income over Time",
+                        data: results,
                         backgroundColor: [
                           'rgba(105, 0, 132, .2)',
                         ],
                         borderColor: [
                           'rgba(200, 99, 132, .7)',
-                        ],
-                        borderWidth: 2
-                      },
-                      {
-                        label: "My Second dataset",
-                        data: [28, 48, 40, 19, 86, 27, 90],
-                        backgroundColor: [
-                          'rgba(0, 137, 132, .2)',
-                        ],
-                        borderColor: [
-                          'rgba(0, 10, 130, .7)',
                         ],
                         borderWidth: 2
                       }
@@ -88,6 +87,7 @@
                     }
                   });
                 </script>
+
               </canvas>
               </th>
             </tr>
@@ -130,6 +130,7 @@
             <canvas id="barChart">
               <script>
                 //bar
+                console.log('test')
                 var ctxB = document.getElementById("barChart").getContext('2d');
                 var myBarChart = new Chart(ctxB, {
                   type: 'bar',
@@ -229,7 +230,7 @@
               </script>
             </canvas>
           </div>
-          <div class='col-7'>
+          <div class='col-6'>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -304,13 +305,13 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1Put a working link here</th>
+                  <th scope="row">1. Put a working link here</th>
                 </tr>
                 <tr>
-                  <th scope="row">2Put a working link here</th>
+                  <th scope="row">2. Put a working link here</th>
                 </tr>
                 <tr>
-                  <th scope="row">3Put a working link here</th>
+                  <th scope="row">3. Put a working link here</th>
                 </tr>
               </tbody>
             </table>

@@ -29,7 +29,7 @@
   <a class="nav-link" href="/options">Edit</a>
   <a class="nav-link" href="/compare">Compare</a>
   <a class="nav-link" href="/logout">Logout</a>
-</nav>
+  </nav>
   <!-- <div class='container-fluid' id='navbar'>
     <div class='row'>
         <table class="table table-dark" id='navbar'>
@@ -59,27 +59,62 @@
             <tr>
               <th scope="row">
               <canvas id="lineChart">
-
-              <script type="text/javascript">
-                  const money = [1,1,1,1,1,1,1,1,1,1];
-                  let monthlyIncomeArr =  [];
-                  console.log(results);
+                <script>
+                  //line JSON.parse('
+                  let data1 = JSON.parse('<%- JSON.stringify(money) %>')[0]
+                  let data2 = JSON.parse('<%- JSON.stringify(money) %>')[1]
+                  let data3 = JSON.parse('<%- JSON.stringify(money) %>')[2]
+                  let data4 = JSON.parse('<%- JSON.stringify(money) %>')[3]
+                  let data5 = JSON.parse('<%- JSON.stringify(money) %>')[4]
+                  let data6 = JSON.parse('<%- JSON.stringify(money) %>')[5]
+                  let data7 = JSON.parse('<%- JSON.stringify(money) %>')[6]
+                  let data8 = JSON.parse('<%- JSON.stringify(money) %>')[7]
+                  let data9 = JSON.parse('<%- JSON.stringify(money) %>')[8]
+                  let data10 = JSON.parse('<%- JSON.stringify(money) %>')[9]
+                  let data11 = JSON.parse('<%- JSON.stringify(money) %>')[10]
+                  let data12 = JSON.parse('<%- JSON.stringify(money) %>')[11]
+                    // console.log(data1);
+                    // console.log(data2)
                   var ctxL = document.getElementById("lineChart").getContext('2d');
                   var myLineChart = new Chart(ctxL, {
                     type: 'line',
                     data: {
-                      labels: ["January", "February", "March", "April", "May", "June", "July"],
+                      labels: ["January", "February", "March", "April", "May", "June", "July", "August","September","October","November","December"],
                       datasets: [{
-                        label: "Monthly Income over Time",
-                        data: results,
-                        backgroundColor: [
-                          'rgba(105, 0, 132, .2)',
-                        ],
-                        borderColor: [
-                          'rgba(200, 99, 132, .7)',
-                        ],
-                        borderWidth: 2
-                      }
+                          label: "Networth",
+                          data: [
+                          data1.Monthly_Income, 
+                          data2.Monthly_Income, 
+                          data3.Monthly_Income,
+                          data4.Monthly_Income, 
+                          data5.Monthly_Income, 
+                          data6.Monthly_Income,
+                          data7.Monthly_Income, 
+                          data8.Monthly_Income, 
+                          data9.Monthly_Income,
+                          data10.Monthly_Income, 
+                          data11.Monthly_Income, 
+                          data12.Monthly_Income  
+                          ],
+                          backgroundColor: [
+                            'rgba(105, 0, 132, .2)',
+                          ],
+                          borderColor: [
+                            'rgba(200, 99, 132, .7)',
+                          ],
+                          borderWidth: 1
+                        },
+                        // {
+                        //   label: "My Second dataset",
+                        //   data: [28, 48, 40, 19, 86, 27, 90],
+                        //   backgroundColor: [
+                        //     'rgba(0, 137, 132, .2)',
+                        //   ],
+                        //   borderColor: [
+                        //     'rgba(0, 10, 130, .7)',
+                        //   ],
+                        //   borderWidth: 2
+                        // }
                       ]
                     },
                     options: {

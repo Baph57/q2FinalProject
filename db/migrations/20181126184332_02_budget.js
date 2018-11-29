@@ -34,6 +34,7 @@ exports.up = function(knex, Promise) {
     table.float('Worth');
     table.float('Checking');
     table.float('Saving')
+    table.integer('Month')
     table.integer('user_id')
       .references('id')
       .inTable('users')

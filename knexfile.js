@@ -3,7 +3,8 @@ module.exports = {
       client: 'pg',
       connection: {
         database:"budget",
-        host:"localhost"
+        host:"localhost",
+
       },
       migrations: {
           directory: __dirname + '/db/migrations',

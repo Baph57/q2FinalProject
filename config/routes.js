@@ -10,6 +10,7 @@ module.exports = function(app){
   app.get('/logout', guests.logout);
   app.get('/register', guests.register);
   app.get('/register2', guests.register2);
+  app.get('/bumper', guests.bumper)
   app.post('/newRegister', guests.newRegister);
   app.post('/confirmLogin', guests.confirmLogin);
 

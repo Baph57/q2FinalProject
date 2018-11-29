@@ -1,15 +1,21 @@
 
 .main{
+  position:absolute;
+  /* left:50vh; */
   height:100vh;
   width:100vw;
-  background-color:lightgray;
-
-  /* background-color: red; */
 }
 .container{
-  background-color: gray;
-  margin:3vh;
-  /* border:1px solid black; */
-  display: flex;
-  float:left;
+  width:10vw;
+
+
+}
+.col-5{
+
+  height:40vh;
+margin-top:2vh;
+  margin-left:35vh;
+}
+#doughnutChart{
+
 }

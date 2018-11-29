@@ -69,7 +69,7 @@ module.exports = {
   },
   bumper: (req,res)=>{
     knex('budget').then(x => {res.render('bumper', {x : x})})
-    
+
     // .where("user_id", req.session.users_id)
     // .then((y) =>{req.session.save(() => res.render("bumper", { results: y }))
   // })

@@ -27,14 +27,24 @@
 </head>
 
 
+
 <body>
+  <nav class="navbar navbar-dark bg-dark">
+  <a class="nav-link active" href="/">Home</a>
+  <a class="nav-link" href="/options">Edit</a>
+<!-- <a class="nav-link" href="/compare">Compare</a> -->
+  <a class="nav-link" href="/logout">Logout</a>
+</nav>
   <div class="main">
 
+<div class="container">
 
-  <div class="container">
 
+  <div class="col-5">
+Recommended budget percentages by Dave Ramsey.
 
 <canvas id="doughnutChart"></canvas>
+
 <script>
   //doughnut
   var ctxD = document.getElementById("doughnutChart").getContext('2d');
@@ -43,7 +53,7 @@
     data: {
       labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
       datasets: [{
-        data: [300, 50, 100, 40, 120],
+        data: [35, 10, 100, 40, 120],
         backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
         hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
       }]
@@ -56,8 +66,12 @@
 
 </script>
 </div>
+</div>
 <div class="container">
 
+
+<div class="col-5">
+your working budget
 
 <canvas id="doughnutChart1"></canvas>
 <script>
@@ -80,6 +94,9 @@ var myLineChart = new Chart(ctxD, {
 
 
 </script>
+</div>
+</div>
+
 </div>
 
 

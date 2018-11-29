@@ -74,7 +74,7 @@ module.exports = {
           req.session.users_id = users.id;
           // console.log(req.session);
           knex('budget')
-            .where(req.session.users_id == budget.user_id)
+            .where("user_id", req.session.users_id)
             .then((x) => {req.session.data = x })
             .then((y) =>{
               req.session.save(() => res.render("profile", { results: y }))

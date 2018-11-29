@@ -24,20 +24,27 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class='container-fluid' id='navbar'>
+  <nav class="navbar navbar-dark bg-dark">
+  <a class="nav-link active" href="#">Home</a>
+  <a class="nav-link" href="/options">Edit</a>
+  <a class="nav-link" href="/compare">Compare</a>
+  <a class="nav-link" href="/logout">Logout</a>
+</nav>
+  <!-- <div class='container-fluid' id='navbar'>
     <div class='row'>
         <table class="table table-dark" id='navbar'>
           <thead>
             <tr>
-              <th scope="col">Home</th>
-              <th scope="col">Options</th>
-              <th scope="col">Edit Values</th>
-              <th scope="col">About</th>
+              <a href="#">  <th scope="col">Home</th> </a>
+              <a href="#"> <th scope="col">Options</th> </a>
+              <a href="options"> <th scope="col">Edit Values</th> </a>
+              <a href="#"> <th scope="col">About</th> </a>
+              <a href="/logout"> <th scope="col" href="/logout">Log Out </th> </a>
             </tr>
           </thead>
-        </table>
-    </div>
-  </div>
+        </table> -->
+    <!-- </div>
+  </div> -->
   <div class='container-fluid' id='content'>
     <div class='row'>
       <div class='col-3'>
@@ -52,11 +59,11 @@
             <tr>
               <th scope="row">
               <canvas id="lineChart">
-                <% let money.then((result)=>{ %>
+
               <script type="text/javascript">
                   const money = [1,1,1,1,1,1,1,1,1,1];
                   let monthlyIncomeArr =  [];
-                  console.log(sMoney);
+                  console.log(results);
                   var ctxL = document.getElementById("lineChart").getContext('2d');
                   var myLineChart = new Chart(ctxL, {
                     type: 'line',
@@ -64,7 +71,7 @@
                       labels: ["January", "February", "March", "April", "May", "June", "July"],
                       datasets: [{
                         label: "Monthly Income over Time",
-                        data: sMoney,
+                        data: results,
                         backgroundColor: [
                           'rgba(105, 0, 132, .2)',
                         ],
@@ -80,7 +87,7 @@
                     }
                   });
                 </script>
-                <% } >
+
               </canvas>
               </th>
             </tr>

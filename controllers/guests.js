@@ -9,7 +9,8 @@ module.exports = {
       res.render("home")
     }else if (req.session.users_id) {
       // console.log("This console log",req.session.users_id);
-      res.render('profile')
+      knex('budget').where("user_id", req.session.users_id).then((results) => {
+        res.render('profile', { money: results })})
     }else{
       // console.log("Else", req.session)
       res.render('home');

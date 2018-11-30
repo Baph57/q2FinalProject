@@ -45,6 +45,10 @@
         </table> -->
     <!-- </div>
   </div> -->
+
+  <% if(!money[0].Monthly_income){ %>
+    <h1>Please submit your inital data to be displayed</h1>
+  <% }else{ %>
   <div class='container-fluid' id='content'>
     <div class='row'>
       <div class='col-3'>
@@ -383,4 +387,5 @@
     </div>
   </div>
 </body>
+  <% } %>
 </html>

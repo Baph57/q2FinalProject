@@ -1,173 +1,176 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Collecting Data</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <h3>
-      Hello!<br>
-      To create an accurate profile please fill in the information below.
-    </h3>
+
+<head>
+  <meta charset="utf-8">
+  <title>Collecting Data</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h3>
+    Hello!<br>
+    To create an accurate profile please fill in the information below.
+  </h3>
 
   <form class="form-group" action="/register2Post" method="post">
     <label for="Monthly_Income">Monthly Income</label>
     <input type="number" class="form-control" name="Monthly_Income" placeholder="3500">
     <form action="/editData" method="post">
-    
-      
-        
-    
-      
-        <p>Monthly_Income</p>
-        
-        <input type="number" name="Monthly_Income" value="3000">
-        
-      
-        <p>Other_Income</p>
-        
-        <input type="number" name="Other_Income" value="2000">
-        
-      
-        <p>Housing_payment</p>
-        
-        <input type="number" name="Housing_payment" value="3000">
-        
-      
-        <p>Home_Insurance</p>
-        
-        <input type="number" name="Home_Insurance" value="100">
-        
-      
-        <p>Repairs</p>
-        
-        <input type="number" name="Repairs" value="200">
-        
-      
-        <p>Utilities</p>
-        
-        <input type="number" name="Utilities" value="400">
-        
-      
-        <p>Cable</p>
-        
-        <input type="number" name="Cable" value="400">
-        
-      
-        <p>Phone</p>
-        
-        <input type="number" name="Phone" value="250">
-        
-      
-        <p>auto_Payment</p>
-        
-        <input type="number" name="auto_Payment" value="3200">
-        
-      
-        <p>car_Insurance</p>
-        
-        <input type="number" name="car_Insurance" value="200">
-        
-      
-        <p>Gas</p>
-        
-        <input type="number" name="Gas" value="0">
-        
-      
-        <p>car_Repair</p>
-        
-        <input type="number" name="car_Repair" value="400">
-        
-      
-        <p>School_Supplies</p>
-        
-        <input type="number" name="School_Supplies" value="500">
-        
-      
-        <p>Higher_Edu_Loans</p>
-        
-        <input type="number" name="Higher_Edu_Loans" value="2500">
-        
-      
-        <p>Tuition</p>
-        
-        <input type="number" name="Tuition" value="0">
-        
-      
-        <p>Groceries</p>
-        
-        <input type="number" name="Groceries" value="1400">
-        
-      
-        <p>eating_Out</p>
-        
-        <input type="number" name="eating_Out" value="400">
-        
-      
-        <p>Entertainment</p>
-        
-        <input type="number" name="Entertainment" value="300">
-        
-      
-        <p>Pet_Supply</p>
-        
-        <input type="number" name="Pet_Supply" value="200">
-        
-      
-        <p>Personal_Other</p>
-        
-        <input type="number" name="Personal_Other" value="300">
-        
-      
-        <p>Emergency_Fund</p>
-        
-        <input type="number" name="Emergency_Fund" value="500">
-        
-      
-        <p>Retirement_Savings</p>
-        
-        <input type="number" name="Retirement_Savings" value="2500">
-        
-      
-        <p>Investments</p>
-        
-        <input type="number" name="Investments" value="1000">
-        
-      
-        <p>Taxes_Paid</p>
-        
-        <input type="number" name="Taxes_Paid" value="2000">
-        
-      
-        <p>Saving_Goal</p>
-        
-        <input type="number" name="Saving_Goal" value="0">
-        
-      
-        <p>Savings_Rate</p>
-        
-        <input type="number" name="Savings_Rate" value="0">
-        <p>Money</p>
-        <input type="number" name="Money" value="0">
-        <p>Gone</p>
-        <input type="number" name="Gone" value="0">
-        <p>Government</p>
-        <input type="number" name="Government" value="35">
-        <p>Worth</p>
-        <input type="number" name="Worth" value="0">
-        <p>Checking</p>
-        <input type="number" name="Checking" value="0">
-        <p>Saving</p>
-        <input type="number" name="Saving" value="0">
-        <p>Month</p>
-        <input type="number" name="Month" value="1">
-    <br> <input type="submit" name="" value="Submit">
-  </form>
+
+
+
+
+
+      <p>Monthly_Income</p>
+
+      <input type="number" name="Monthly_Income" value="3000">
+
+
+      <p>Other_Income</p>
+
+      <input type="number" name="Other_Income" value="2000">
+
+
+      <p>Housing_payment</p>
+
+      <input type="number" name="Housing_payment" value="3000">
+
+
+      <p>Home_Insurance</p>
+
+      <input type="number" name="Home_Insurance" value="100">
+
+
+      <p>Repairs</p>
+
+      <input type="number" name="Repairs" value="200">
+
+
+      <p>Utilities</p>
+
+      <input type="number" name="Utilities" value="400">
+
+
+      <p>Cable</p>
+
+      <input type="number" name="Cable" value="400">
+
+
+      <p>Phone</p>
+
+      <input type="number" name="Phone" value="250">
+
+
+      <p>auto_Payment</p>
+
+      <input type="number" name="auto_Payment" value="3200">
+
+
+      <p>car_Insurance</p>
+
+      <input type="number" name="car_Insurance" value="200">
+
+
+      <p>Gas</p>
+
+      <input type="number" name="Gas" value="0">
+
+
+      <p>car_Repair</p>
+
+      <input type="number" name="car_Repair" value="400">
+
+
+      <p>School_Supplies</p>
+
+      <input type="number" name="School_Supplies" value="500">
+
+
+      <p>Higher_Edu_Loans</p>
+
+      <input type="number" name="Higher_Edu_Loans" value="2500">
+
+
+      <p>Tuition</p>
+
+      <input type="number" name="Tuition" value="0">
+
+
+      <p>Groceries</p>
+
+      <input type="number" name="Groceries" value="1400">
+
+
+      <p>eating_Out</p>
+
+      <input type="number" name="eating_Out" value="400">
+
+
+      <p>Entertainment</p>
+
+      <input type="number" name="Entertainment" value="300">
+
+
+      <p>Pet_Supply</p>
+
+      <input type="number" name="Pet_Supply" value="200">
+
+
+      <p>Personal_Other</p>
+
+      <input type="number" name="Personal_Other" value="300">
+
+
+      <p>Emergency_Fund</p>
+
+      <input type="number" name="Emergency_Fund" value="500">
+
+
+      <p>Retirement_Savings</p>
+
+      <input type="number" name="Retirement_Savings" value="2500">
+
+
+      <p>Investments</p>
+
+      <input type="number" name="Investments" value="1000">
+
+
+      <p>Taxes_Paid</p>
+
+      <input type="number" name="Taxes_Paid" value="2000">
+
+
+      <p>Saving_Goal</p>
+
+      <input type="number" name="Saving_Goal" value="0">
+
+
+      <p>Savings_Rate</p>
+
+      <input type="number" name="Savings_Rate" value="0">
+      <p>Money</p>
+      <input type="number" name="Money" value="0">
+      <p>Gone</p>
+      <input type="number" name="Gone" value="0">
+      <p>Government</p>
+      <input type="number" name="Government" value="35">
+      <p>Worth</p>
+      <input type="number" name="Worth" value="0">
+      <p>Checking</p>
+      <input type="number" name="Checking" value="0">
+      <p>Saving</p>
+      <input type="number" name="Saving" value="0">
+      <p>Month</p>
+      <input type="number" name="Month" value="1">
+      <br> <input type="submit" name="" value="Submit">
+    </form>
     <input type="submit" class="btn btn-primary" value="Submit">
   </form>
-  </body>
+</body>
+
 </html>

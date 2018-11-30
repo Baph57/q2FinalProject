@@ -57,7 +57,7 @@ module.exports = {
           knex('budget')
             .where('user_id', req.session.users_id)
             .then(x => {
-            if(!x.Monthly_Income) {
+            if(!x[0].Monthly_Income) {
               res.render('register2')
             } else {
               console.log('profileroute')

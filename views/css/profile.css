@@ -7,6 +7,7 @@ body{
 }
 .container-fluid{
     margin: 0 !important;
+    height: 90vh !important;
 }
 #navbar{
     width: 100vw;
@@ -30,14 +31,14 @@ body{
     margin: 0px !important;
 }
 #top3rd{
-    height: 30% !important;
+    height: 25% !important;
     width: 100%;
     /* background-color: rgb(238, 252, 255); */
     margin: 0px 0px !important;
     padding: 2px !important;
 }
 #mid3rd{
-    height: 30% !important;
+    height: 25% !important;
     width: 100%;
     /* background-color: purple; */
     margin: 20px 0px 0px 0px !important;
@@ -94,4 +95,15 @@ th{
     height:200px;
     width: 100%;
 }
-
+.carousel-item{
+    height: 250px !important;
+}
+#horizontalBar{
+    height: 300px !important;
+}
+#barChart{
+    height: 250px !important;
+}
+#pieChart{
+    height: 250px !important;
+}

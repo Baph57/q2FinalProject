@@ -17,9 +17,11 @@
         <%# do nothing  %>
     <% }else{ %>
         <p><%= [i] %></p>
+        <% if ([i] !== "Month"){ %>
         <input type="number" name=<%= [i] %> value=<%= Number(money[i]) %> >
-        <%  } %>
-    <%  } %>
+        <%  } else { %>
+        <input type="date" name=<%= [i] %>  >
+    <%  }}} %>
     <br> <input type="submit" name="" value="Submit">
 
   </form>

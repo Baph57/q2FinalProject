@@ -16,8 +16,11 @@ module.exports = {
   },
   editData: (req,res) =>{
     console.log(req.body);
-    knex('budget').where('user_id', req.session.users_id).update(req.body).then(
-      res.render('profile')
+    knex('budget')
+    .where('user_id', req.session.users_id)
+    .andWhere('Month', req.body.Month)
+    .update(req.body).then(
+      res.redirect('/profile')
     )
   },
   compare:(req,res)=> {

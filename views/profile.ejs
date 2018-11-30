@@ -26,7 +26,7 @@
 <body>
   <nav class="navbar navbar-dark bg-dark">
   <a class="nav-link active" href="#">Home</a>
-  <a class="nav-link" href="/options">Edit</a>
+  <a class="nav-link" href="/options">Edit Values</a>
   <a class="nav-link" href="/compare">Compare</a>
   <a class="nav-link" href="/logout">Logout</a>
   </nav>
@@ -73,7 +73,7 @@
                   let data10 = JSON.parse('<%- JSON.stringify(money) %>')[9]
                   let data11 = JSON.parse('<%- JSON.stringify(money) %>')[10]
                   let data12 = JSON.parse('<%- JSON.stringify(money) %>')[11]
-                    // console.log(data1);
+                    console.log('doesnt matter');
                     // console.log(data2)
                   var ctxL = document.getElementById("lineChart").getContext('2d');
                   var myLineChart = new Chart(ctxL, {
@@ -104,17 +104,30 @@
                           ],
                           borderWidth: 1
                         },
-                        // {
-                        //   label: "My Second dataset",
-                        //   data: [28, 48, 40, 19, 86, 27, 90],
-                        //   backgroundColor: [
-                        //     'rgba(0, 137, 132, .2)',
-                        //   ],
-                        //   borderColor: [
-                        //     'rgba(0, 10, 130, .7)',
-                        //   ],
-                        //   borderWidth: 2
-                        // }
+                        {
+                          label: "Business Expenses",
+                          data: [
+                            data1.Other_Income,
+                            data2.Other_Income,
+                            data3.Other_Income,
+                            data4.Other_Income,
+                            data5.Other_Income,
+                            data6.Other_Income,
+                            data7.Other_Income,
+                            data8.Other_Income,
+                            data9.Other_Income,
+                            data10.Other_Income,
+                            data11.Other_Income,
+                            data12.Other_Income
+                          ],
+                          backgroundColor: [
+                            'rgba(0, 137, 132, .2)',
+                          ],
+                          borderColor: [
+                            'rgba(0, 10, 130, .7)',
+                          ],
+                          borderWidth: 1
+                        }
                       ]
                     },
                     options: {
@@ -122,7 +135,6 @@
                     }
                   });
                 </script>
-
               </canvas>
               </th>
             </tr>
@@ -139,20 +151,19 @@
         <table class="table">
           <thead>
             <tr>
-
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Add Twitter</th>
+              <th scope="row">Placeholder </th>
               <td>email@email.com</td>
             </tr>
             <tr>
-              <th scope="row">Add Facebook</th>
+              <th scope="row">Placeholder</th>
               <td>email@email.com</td>
             </tr>
             <tr>
-              <th scope="row">Add Linked-In</th>
+              <th scope="row">Placeholder</th>
               <td>email@email.com</td>
             </tr>
           </tbody>
@@ -170,11 +181,42 @@
                 var myBarChart = new Chart(ctxB, {
                   type: 'bar',
                   data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                    labels: [
+                    "School Supplies",
+                    "car_Insurance",
+                    "Retirement Savings", 
+                    "Investments", 
+                    "Utilities", 
+                    "Education Debt", 
+                    "Groceries", 
+                    "Taxes Paid", 
+                    "Auto Payment", 
+                    "Restaurant Expenditure", 
+                    "Housing Payment", 
+                    "Pet Expenditure"],
                     datasets: [{
-                      label: '# of Votes',
-                      data: [12, 50, 3, 5, 2, 3],
+                      label: "Expenses",
+                      data: [
+                        data12.School_Supplies,
+                        data12.car_Insurance,
+                        data12.Retirement_Savings,
+                        data12.Investments,
+                        data12.Utilities,
+                        data12.Higher_Edu_Loans,
+                        data12.Groceries,
+                        data12.Taxes_Paid,
+                        data12.auto_Payment,
+                        data12.eating_Out,
+                        data12.Housing_payment,
+                        data12.Pet_Supply
+                      ],
                       backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
@@ -183,6 +225,12 @@
                         'rgba(255, 159, 64, 0.2)'
                       ],
                       borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
                         'rgba(255,99,132,1)',
                         'rgba(54, 162, 235, 1)',
                         'rgba(255, 206, 86, 1)',
@@ -212,10 +260,16 @@
                 new Chart(document.getElementById("horizontalBar"), {
                   "type": "horizontalBar",
                   "data": {
-                    "labels": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey"],
+                    "labels": ["Cash Flow", "Housing", "Transport", "Education", "Personal", "Savings"],
                     "datasets": [{
-                      "label": "My First Dataset",
-                      "data": [22, 33, 55, 12, 86, 23, 14],
+                      "label": "Financial Overview",
+                      "data": [
+                      data12.Monthly_Income + data12.Other_Income,
+                      data12.Housing_payment + data12.Home_Insurance + data12.Repairs + data12.Utilities + data12.Cable + data12.Pet_Supply + data12.Taxes_Paid, 
+                      data12.auto_Payment + data12.car_Insurance + data12.Gas + data12.car_Repair, 
+                      data12.School_Supplies + data12.Higher_Edu_Loans + data12.Tuition, 
+                      data12.Groceries + data12.eating_Out + data12.Entertainment + data12.Personal_Other, 
+                      data12.Emergency_Fund + data12.Retirement_Savings + data12.Investments],
                       "fill": false,
                       "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
                         "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)",
@@ -250,9 +304,15 @@
                 var myPieChart = new Chart(ctxP, {
                   type: 'pie',
                   data: {
-                    labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+                    labels: ["Housing", "Transport", "Education", "Personal", "Savings"],
                     datasets: [{
-                      data: [300, 50, 100, 40, 120],
+                      data: [
+                        data12.Housing_payment + data12.Home_Insurance + data12.Repairs + data12.Utilities + data12.Cable + data12.Pet_Supply + data12.Taxes_Paid,
+                        data12.auto_Payment + data12.car_Insurance + data12.Gas + data12.car_Repair,
+                        data12.School_Supplies + data12.Higher_Edu_Loans + data12.Tuition,
+                        data12.Groceries + data12.eating_Out + data12.Entertainment + data12.Personal_Other,
+                        data12.Emergency_Fund + data12.Retirement_Savings + data12.Investments
+                      ],
                       backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
                       hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
                     }]
@@ -291,45 +351,32 @@
         </div>
         <div class='row' id='bot3rd'>
           <div class='col-6'>
-            <canvas id="radarChart">
-            <script>
-              //radar
-              var ctxR = document.getElementById("radarChart").getContext('2d');
-              var myRadarChart = new Chart(ctxR, {
-                type: 'radar',
-                data: {
-                  labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-                  datasets: [{
-                    label: "My First dataset",
-                    data: [65, 59, 90, 81, 56, 55, 40],
-                    backgroundColor: [
-                      'rgba(105, 0, 132, .2)',
-                    ],
-                    borderColor: [
-                      'rgba(200, 99, 132, .7)',
-                    ],
-                    borderWidth: 2
-                  },
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div id="tradingview_61907"></div>
+              <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener"
+                  target="_blank"><span class="blue-text">AAPL chart</span></a> by TradingView</div>
+              <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+              <script type="text/javascript">
+                new TradingView.widget(
                   {
-                    label: "My Second dataset",
-                    data: [28, 48, 40, 19, 96, 27, 100],
-                    backgroundColor: [
-                      'rgba(0, 250, 220, .2)',
-                    ],
-                    borderColor: [
-                      'rgba(0, 213, 132, .7)',
-                    ],
-                    borderWidth: 2
+                    "width": 500,
+                    "height": 250,
+                    "symbol": "NASDAQ:AAPL",
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "Dark",
+                    "style": "1",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "container_id": "tradingview_61907"
                   }
-                  ]
-                },
-                options: {
-                  responsive: true
-                }
-              });
-            </script>
-
-            </canvas>
+                );
+              </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
           <div class='col-5'>
             <table class="table table-hover">

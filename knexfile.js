@@ -2,9 +2,9 @@ module.exports = {
  development: {
      client: 'pg',
      connection: {
-       database:"postgres",
+       database:"budget",
        host:"localhost",
-      
+
      },
      migrations: {
          directory: __dirname + '/db/migrations',

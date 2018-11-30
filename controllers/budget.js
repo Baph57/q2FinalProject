@@ -21,8 +21,10 @@ module.exports = {
     )
   },
   compare:(req,res)=> {
-    knex('budget').where('user', )
-    res.render('comparison');
+    knex('budget').where("user_id", req.session.users_id).then((results)=>{
+      console.log(results)
+        res.render('comparison',{money: results});
+    })
   },
 
   //a new user inputs data

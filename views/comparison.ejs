@@ -51,11 +51,11 @@ Recommended budget percentages by Dave Ramsey.
   var myLineChart = new Chart(ctxD, {
     type: 'doughnut',
     data: {
-      labels: ["Everything Else", "Food", "Charity", "Savings", "Housing"],
+    labels: ["Housing", "Auto", "Edu", "Food ", "Pet", "personal","Savings","tax"],
       datasets: [{
-        data: [35, 10, 10, 15, 30],
-        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+        data: [80, 60, 40, 20,5, 3,80,30],
+        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360", "Orange",'Green', 'Pink'],
+        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774","Orange",'Green','Pink']
       }]
     },
     options: {
@@ -75,16 +75,44 @@ your working budget
 
 <canvas id="doughnutChart1"></canvas>
 <script>
+let data1 = JSON.parse('<%- JSON.stringify(money) %>')[0]
+let data2 = JSON.parse('<%- JSON.stringify(money) %>')[1]
+let data3 = JSON.parse('<%- JSON.stringify(money) %>')[2]
+let data4 = JSON.parse('<%- JSON.stringify(money) %>')[3]
+let data5 = JSON.parse('<%- JSON.stringify(money) %>')[4]
+let data6 = JSON.parse('<%- JSON.stringify(money) %>')[5]
+let data7 = JSON.parse('<%- JSON.stringify(money) %>')[6]
+let data8 = JSON.parse('<%- JSON.stringify(money) %>')[7]
+let data9 = JSON.parse('<%- JSON.stringify(money) %>')[8]
+let data10 = JSON.parse('<%- JSON.stringify(money) %>')[9]
+let data11 = JSON.parse('<%- JSON.stringify(money) %>')[10]
+let data12 = JSON.parse('<%- JSON.stringify(money) %>')[11]
+let totle_income = (data1.Monthly_Income + data1.Other_Income);
+console.log(totle_income)
+let Housing = data1.Housing_payment + data1.Home_Insurance + data1.Repairs+ data1.Utilities + data1.Cable + data1.Phone;
+let Auto = data1.auto_Payment + data1.car_Insurance + data1.Gas + data1.car_Repair;
+console.log(Auto)
+let Edu = data1.School_Supplies + data1.Higher_Edu_Loans + data1.Tuition;
+console.log(Edu)
+let Food = data1.Groceries + data1.eating_Out;
+console.log(Food)
+let Pet = data1.Pet_Supply;
+console.log(Pet)
+let personal = data1.Personal_Other
+console.log(personal)
+let Savings = data1.Emergency_Fund + data1.Retirement_Savings + data1.Investments;
+console.log(Savings)
+let tax = data1.Taxes_Paid;
 //doughnut
 var ctxD = document.getElementById("doughnutChart1").getContext('2d');
 var myLineChart = new Chart(ctxD, {
   type: 'doughnut',
   data: {
-    labels: ["Everything Else", "Food", "Charity", "Savings", "Housing"],
+    labels: ["Housing", "Auto", "Edu", "Food ", "Pet", "personal","Savings","tax"],
     datasets: [{
-      data: [35, 10, 10, 15, 30],
-      backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-      hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+      data: [(Housing/totle_income)*100, (Auto/totle_income)*100, (Edu/totle_income)*100, (Food/totle_income)*100, (Pet/totle_income)*100,(personal/totle_income)*100,(Savings/totle_income)*100,(tax/totle_income)*100],
+      backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360", "Orange",'Green', 'Pink'],
+      hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774","Orange",'Green','Pink']
     }]
   },
   options: {

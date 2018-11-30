@@ -41,7 +41,7 @@
 
 
   <div class="col-6">
-Recommended budget percentages by Dave Ramsey.
+Recommended budget percentages.
 
 <canvas id="doughnutChart"></canvas>
 
@@ -53,7 +53,7 @@ Recommended budget percentages by Dave Ramsey.
     data: {
     labels: ["Housing", "Auto", "Edu", "Food ", "Pet", "personal","Savings","tax"],
       datasets: [{
-        data: [80, 60, 40, 20,5, 3,80,30],
+        data: [4000, 3350, 2000, 1000,300, 200,6600,2000],
         backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360", "purple",'Green', 'Pink'],
         hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774","purple",'Green','Pink']
       }]
@@ -71,7 +71,7 @@ Recommended budget percentages by Dave Ramsey.
 
 
 <div class="col-6">
-your working budget
+Your working budget.
 
 <canvas id="doughnutChart1"></canvas>
 <script>
@@ -110,9 +110,9 @@ var myLineChart = new Chart(ctxD, {
   data: {
     labels: ["Housing", "Auto", "Edu", "Food ", "Pet", "personal","Savings","tax"],
     datasets: [{
-      data: [(Housing/totle_income)*100, (Auto/totle_income)*100, (Edu/totle_income)*100, (Food/totle_income)*100, (Pet/totle_income)*100,(personal/totle_income)*100,(Savings/totle_income)*100,(tax/totle_income)*100],
-      backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360", "Orange",'Green', 'Pink'],
-      hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774","Orange",'Green','Pink']
+      data: [(Housing), (Auto), (Edu), (Food), (Pet),(personal),(Savings),(tax)],
+      backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360", "purple",'Green', 'Pink'],
+      hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774","purple",'Green','Pink']
     }]
   },
   options: {

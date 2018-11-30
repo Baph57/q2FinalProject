@@ -1,6 +1,6 @@
 
 .main{
-  background-color: darkslategray;
+    background-color: rgb(159, 173, 255) !important;
   position:absolute;
   /* left:50vh; */
   height:95vh;
@@ -17,8 +17,8 @@
 
 
   height:40vh;
-margin-top:2vh;
-  margin-left:30vh;
+margin-top:5vh;
+  margin-left:35vh;
 }
 #doughnutChart{
 

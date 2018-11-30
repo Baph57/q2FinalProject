@@ -34,7 +34,8 @@ module.exports = {
       knex('users').insert({
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        first_time_user: 1
       }).then(() => {
         res.redirect("/login")
       })

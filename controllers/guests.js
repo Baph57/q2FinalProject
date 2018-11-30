@@ -5,7 +5,7 @@ module.exports = {
   home: (req, res) => {
     // console.log("starter session",req.session);
     if (!req.session) {
-      req.session = {};
+      req.session = [];
       res.render("home")
     } else if (req.session.users_id) {
       // console.log("This console log",req.session.users_id);
@@ -57,11 +57,13 @@ module.exports = {
           // console.log(req.session);
           knex('budget')
             .where('user_id', req.session.users_id)
-            .then(x => {
-            if(!x[0].Monthly_Income) {
+            .then(x => { 
+              console.log(x, '<-- x')
+              console.log(x[0], '<-- x[0]')
+            if(x[0] == undefined) {
               res.render('register2')
             } else {
-              console.log('profileroute')
+              console.log('profile route')
               res.render("profile", {money: x})
             }
               req.session.save(() => {}

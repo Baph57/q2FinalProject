@@ -2,14 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Modify Your Data</title>
-    <style media="screen">
-      *{
-      text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+
   </head>
-  <body>
+  <body class="container-fluid">
     <h1>Modify Your data</h1>
 <form action="/editData" method="post">
     <% for(let i in money){ %>
@@ -18,7 +17,7 @@
     <% }else{ %>
         <p><%= [i] %></p>
         <% if ([i] !== "Month"){ %>
-        <input type="number" name=<%= [i] %> value=<%= Number(money[i]) %> >
+        <input class="list-group-item"type="number" name=<%= [i] %> value=<%= Number(money[i]) %> >
         <%  } else { %>
         <input type="date" name=<%= [i] %>  >
     <%  }}} %>

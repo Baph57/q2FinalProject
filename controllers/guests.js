@@ -70,7 +70,7 @@ module.exports = {
               };
             })
         },
-    
+
   // deletes user session and returns user to login screen
   logout: (req, res) => {
     req.session.destroy();

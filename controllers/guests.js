@@ -43,36 +43,36 @@ module.exports = {
     }
   },
   register2: (req, res) => {
-    res.render('register2')
+      res.render('register2')
   },
   // check if users email exisits, if exisits check if password matches, if matches save user data in sessions
   confirmLogin: (req, res) => {
-    knex('users')
-      .where('email', req.body.email)
-      .then(x => {
-        let users = x[0]
-        if (users.password == req.body.password) {
-          req.session.users_id = users.id;
-          // console.log(req.session);
-          knex('budget')
-            .where('user_id', req.session.users_id)
-            .then(x => {
-              console.log(x, '<-- x')
-              console.log(x[0], '<-- x[0]')
-            if(x[0] == undefined) {
-              res.render('register2', {x:x})
-            } else {
-              console.log('profile route')
-              res.render("profile", {money: x})
-            }
-              req.session.save(() => {}
-              )})
-              } else {
-                res.render("login")
-              };
-            })
-        },
-
+     knex("users")
+       .where("email", req.body.email)
+       .then(x => {
+         let users = x[0]
+         if (users.password == req.body.password) {
+           req.session.users_id = users.id;
+           // console.log(req.session);
+           knex("budget")
+             .where("user_id", req.session.users_id)
+             .then(x => {
+               console.log(x," <-- x")
+               console.log(x[0], "<-- x[0]")
+             if(x[0] == undefined) {
+               console.log("register2", users)
+               res.render("register2", {user:users})
+             } else {
+               console.log("profile route")
+               res.render("profile", {money: x})
+             }
+               req.session.save(() => {}
+               )})
+               } else {
+                 res.render("login")
+               };
+             })
+         },
   // deletes user session and returns user to login screen
   logout: (req, res) => {
     req.session.destroy();

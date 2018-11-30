@@ -3,174 +3,117 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Collecting Data</title>
+  <link href="css/register.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <h3>
     Hello!<br>
-    To create an accurate profile please fill in the information below.
+    To create an accurate profile please fill in the information below:
   </h3>
-
   <form class="form-group" action="/register2Post" method="post">
-    <label for="Monthly_Income">Monthly Income</label>
-    <input type="number" class="form-control" name="Monthly_Income" placeholder="3500">
-    <form action="/editData" method="post">
-
-
-
-
-
-      <p>Monthly_Income</p>
-
-      <input type="number" name="Monthly_Income" value="3000">
-
-
-      <p>Other_Income</p>
-
-      <input type="number" name="Other_Income" value="2000">
-
-
-      <p>Housing_payment</p>
-
-      <input type="number" name="Housing_payment" value="3000">
-
-
-      <p>Home_Insurance</p>
-
-      <input type="number" name="Home_Insurance" value="100">
-
-
-      <p>Repairs</p>
-
-      <input type="number" name="Repairs" value="200">
-
-
-      <p>Utilities</p>
-
-      <input type="number" name="Utilities" value="400">
-
-
-      <p>Cable</p>
-
-      <input type="number" name="Cable" value="400">
-
-
-      <p>Phone</p>
-
-      <input type="number" name="Phone" value="250">
-
-
-      <p>auto_Payment</p>
-
-      <input type="number" name="auto_Payment" value="3200">
-
-
-      <p>car_Insurance</p>
-
-      <input type="number" name="car_Insurance" value="200">
-
-
-      <p>Gas</p>
-
-      <input type="number" name="Gas" value="0">
-
-
-      <p>car_Repair</p>
-
-      <input type="number" name="car_Repair" value="400">
-
-
-      <p>School_Supplies</p>
-
-      <input type="number" name="School_Supplies" value="500">
-
-
-      <p>Higher_Edu_Loans</p>
-
-      <input type="number" name="Higher_Edu_Loans" value="2500">
-
-
-      <p>Tuition</p>
-
-      <input type="number" name="Tuition" value="0">
-
-
-      <p>Groceries</p>
-
-      <input type="number" name="Groceries" value="1400">
-
-
-      <p>eating_Out</p>
-
-      <input type="number" name="eating_Out" value="400">
-
-
-      <p>Entertainment</p>
-
-      <input type="number" name="Entertainment" value="300">
-
-
-      <p>Pet_Supply</p>
-
-      <input type="number" name="Pet_Supply" value="200">
-
-
-      <p>Personal_Other</p>
-
-      <input type="number" name="Personal_Other" value="300">
-
-
-      <p>Emergency_Fund</p>
-
-      <input type="number" name="Emergency_Fund" value="500">
-
-
-      <p>Retirement_Savings</p>
-
-      <input type="number" name="Retirement_Savings" value="2500">
-
-
-      <p>Investments</p>
-
-      <input type="number" name="Investments" value="1000">
-
-
-      <p>Taxes_Paid</p>
-
-      <input type="number" name="Taxes_Paid" value="2000">
-
-
-      <p>Saving_Goal</p>
-
-      <input type="number" name="Saving_Goal" value="0">
-
-
-      <p>Savings_Rate</p>
-
-      <input type="number" name="Savings_Rate" value="0">
-      <p>Money</p>
-      <input type="number" name="Money" value="0">
-      <p>Gone</p>
-      <input type="number" name="Gone" value="0">
-      <p>Government</p>
-      <input type="number" name="Government" value="35">
-      <p>Worth</p>
-      <input type="number" name="Worth" value="0">
-      <p>Checking</p>
-      <input type="number" name="Checking" value="0">
-      <p>Saving</p>
-      <input type="number" name="Saving" value="0">
-      <p>Month</p>
-      <input type="number" name="Month" value="1">
-      <br> <input type="submit" name="" value="Submit">
+    <div class="card-columns">
+    <div class="card bg-light mb-3 flex-col" style="max-width: 18rem;">
+      <div class="card-header"> Housings Costs </div>
+      <div class="card-body">
+        <label for="Monthly_Income">Monthly Income</label>
+        <input type="number" class="form-control" name="Monthly_Income" placeholder="3500">
+        <label for="Other_Income">Other Income</label>
+        <input type="number" name="Other_Income" class="form-control" value="2000">
+        <label for="Housing_payment">Rent or Mortgage</label>
+        <input type="number" name="Housing_payment" class="form-control" value="3000">
+        <label for="Home_Insurance">Home Insurance</label>
+        <input type="number" name="Home_Insurance" class="form-control" value="100">
+        <label for="repairs">Home Maintainance Costs</label>
+        <input type="number" name="Repairs" class ="form-control" value="200">
+        <label for="Utilities">Utilities</label>
+        <input type="number" name="Utilities" class="form-control" value="400">
+        <label for="Cable">Cable</label>
+        <input type="number" name="Cable" class="form-control" value="400">
+        <label for="Phone">Phone</label>
+        <input type="number" name="Phone" class="form-control" value="250">
+      </div>
+      </div>
+    <div class="card bg-light mb-3 flex-col" style="max-width: 18rem;">
+
+      <div class="card-header">Auto Costs</div>
+      <div class="card-body">
+        <label for="auto_payment">Car payment</label>
+        <input type="number" name="auto_Payment" class="form-control" value="3200">
+        <label for="car_Insurance">Car Insurance Costs</label>
+        <input type="number" name="car_Insurance" class="form-control" value="200">
+        <label for="Gas">Fuel Costs</label>
+        <input type="number" name="Gas" class="form-control" value="0">
+        <label for="car_repair">Auto Maintainance Costs</label>
+        <input type="number" name="car_Repair" class="form-control" value="400">
+      </div>
+    </div>
+    <div class="card bg-light mb-3 flex-col" style="max-width: 18rem;">
+
+      <div class="card-header">Education Related Expenses</div>
+      <div class="card-body">
+        <label for="School_Supplies">School Supplies</label>
+        <input type="number" name="School_Supplies" class="form-control" value="500">
+        <label for="Higher_Edu_Loans">Higher Education Loans Balance</label>
+        <input type="number" name="Higher_Edu_Loans" class="form-control" value="2500">
+        <label for="Tuition">Monthly Tuition Costs</label>
+        <input type="number" name="Tuition" class="form-control" value="0">
+      </div>
+    </div>
+    <div class="card bg-light mb-3 flex-col" style="max-width: 18rem;">
+      <div class="card-header">Personal Expenses</div>
+      <div class="card-body">
+        <label for="Groceries">Groceries</label>
+        <input type="number" name="Groceries" class="form-control" value="1400">
+        <label for="eating_Out">Dining Out Expenses</label>
+        <input type="number" name="eating_Out" class="form-control" value="400">
+        <label for="Entertainment">Entertainment</label>
+        <input type="number" name="Entertainment" class="form-control" value="300">
+        <label for="Pet_Supply">Pet Related Expenses</label>
+        <input type="number" name="Pet_Supply" class="form-control" value="200">
+        <label for="Personal_Other">Other personal expenses</label>
+        <input type="number" name="Personal_Other" class="form-control" value="300">
+      </div>
+    </div>
+    <div class="card bg-light mb-3 flex-col" style="max-width: 18rem;">
+      <div class="card-header">Savings</div>
+      <div class="card-body">
+        <label for="Emergency_Fund">Monthly Emergency Fund Saving</label>
+        <input type="number" name="Emergency_Fund" class="form-control" value="500">
+        <label for="Retirement_Savings">Retirement Contributions(401k IRA)</label>
+        <input type="number" name="Retirement_Savings" class="form-control" value="2500">
+        <label for="Investments">Non-tax advantage brokerage account contributions</label>
+        <input type="number" name="Investments" class="form-control" value="1000">
+      </div>
+    </div>
+    <div class="card bg-light mb-3 flex-col" style="max-width: 18rem;">
+      <div class="card-header"> Other </div>
+      <div class="card-body">
+        <label for="Taxes_Paid">Monthly FICA, Local, and State Taxes paid </label>
+        <input type="number" name="Taxes_Paid" class="form-control" value="2000">
+        <label for="Saving_Goal">What is your monthly savings goal ($)</label>
+        <input type="number" name="Saving_Goal" class="form-control" value="0">
+        <label for="Savings_Rate">What is your monthly savings goal(%)</label>
+        <input type="number" name="Savings_Rate" class="form-control" value="0">
+        <label for="Government">What is your tax rate (%)</label>
+        <input type="number" name="Government" class="form-control" value="35">
+        <label for="Checking">What is your checking account balance</label>
+        <input type="number" name="Checking" class="form-control" value="0">
+        <label for="Saving">What is your savings account balance</label>
+        <input type="number" name="Saving" class="form-control" value="0">
+        <label for="Month">What month is is?</label>
+        <input type="number" name="Month" class="form-control" value="1">
+      </div>
+    </div>
+  </div>
+      <input type="submit" class="btn btn-primary" value="Submit">
     </form>
-    <input type="submit" class="btn btn-primary" value="Submit">
-  </form>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 </html>

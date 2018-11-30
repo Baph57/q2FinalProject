@@ -26,6 +26,7 @@ module.exports = {
   },
   // create a new user, import into users table and redirect to login
   newRegister: (req,res) => {
+    console.log(req.body);
     if(req.body.password === req.body.confirm_password){
       knex('users').insert({
         name: req.body.name,

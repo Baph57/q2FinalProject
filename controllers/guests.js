@@ -34,8 +34,7 @@ module.exports = {
       knex('users').insert({
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password,
-        first_time_user: 1
+        password: req.body.password
       }).then(() => {
         res.redirect("/login")
       })
@@ -57,7 +56,7 @@ module.exports = {
           // console.log(req.session);
           knex('budget')
             .where('user_id', req.session.users_id)
-            .then(x => { 
+            .then(x => {
               console.log(x, '<-- x')
               console.log(x[0], '<-- x[0]')
             if(x[0] == undefined) {

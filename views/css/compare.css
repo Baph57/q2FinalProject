@@ -1,8 +1,9 @@
 
 .main{
+  background-color: darkslategray;
   position:absolute;
   /* left:50vh; */
-  height:94vh;
+  height:95vh;
   width:100vw;
 }
 .container{

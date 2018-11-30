@@ -32,9 +32,7 @@ module.exports = {
 
   //a new user inputs data
   createData:(req,res)=>{
-    knex('budget').insert(req.body,{
-      user_id: req.session.users_id
-    }).then(
+    knex('budget').insert(req.body).then(
       res.redirect("/profile")
     )
   }

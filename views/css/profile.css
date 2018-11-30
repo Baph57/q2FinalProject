@@ -46,7 +46,7 @@ body{
     padding: 2px !important;
 }
 #bot3rd{
-    height: 30% !important;
+    height: 40% !important;
     width: 100%;
     /* background-color: turquoise; */
     margin: 40px 0px 0px 0px !important;
@@ -102,7 +102,7 @@ th{
     margin: 0px 0 50px 0 !important;
 }
 #horizontalBar{
-    height: 400px !important;
+    height: 250px !important;
     width: 90% !important;
 }
 #barChart{
@@ -111,4 +111,14 @@ th{
 #pieChart{
     height: 200px !important;
     padding: 0% 10% !important;
+}
+#grapher{
+    margin: 0px 0px 0px 50px !important;
+}
+.stylelink{
+    color:blue !important;
+    background-color: white;
+    background-image: -webkit-linear-gradient(silver, lightblue, white);
+    border: 1px ;
+
 }

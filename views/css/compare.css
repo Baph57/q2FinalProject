@@ -6,15 +6,18 @@
   width:100vw;
 }
 .container{
+  font-size: 30px;
+  text-align: center;
   width:10vw;
 
 
 }
-.col-5{
+.col-6{
+
 
   height:40vh;
 margin-top:2vh;
-  margin-left:35vh;
+  margin-left:30vh;
 }
 #doughnutChart{
 

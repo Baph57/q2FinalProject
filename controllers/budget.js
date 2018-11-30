@@ -24,8 +24,12 @@ module.exports = {
     )
   },
   compare:(req,res)=> {
-    res.render('comparison');
+    knex('budget').where("user_id", req.session.users_id).then((results)=>{
+      console.log(results)
+        res.render('comparison',{money: results});
+    })
   },
+
   //a new user inputs data
   createData:(req,res)=>{
     knex('budget').insert(req.body,{

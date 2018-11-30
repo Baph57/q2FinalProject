@@ -1,5 +1,6 @@
 body{
-    background-color: orange;
+    background-color: rgb(159, 173, 255) !important;
+
     /* width: 100vw; */
     /* height: 100vh; */
     margin: 0 !important;
@@ -7,7 +8,6 @@ body{
 }
 .container-fluid{
     margin: 0 !important;
-    height: 90vh !important;
 }
 #navbar{
     width: 100vw;
@@ -16,8 +16,9 @@ body{
     padding: 0px !important;
 }
 #content{
+    /* background-color: ; */
     width: 100vw !important;
-    height: 100vh !important;
+    height: 90vh !important;
     margin: 0px !important;
     padding: 0px !important;
 }
@@ -26,7 +27,7 @@ body{
     margin: 0px !important;
 }
 .col-3{
-    /* background-color: lightblue; */
+    background-color: lightblue !important;
     padding: 0px !important;
     margin: 0px !important;
 }
@@ -41,14 +42,14 @@ body{
     height: 25% !important;
     width: 100%;
     /* background-color: purple; */
-    margin: 20px 0px 0px 0px !important;
+    margin: 80px 0px 0px 0px !important;
     padding: 2px !important;
 }
 #bot3rd{
     height: 30% !important;
     width: 100%;
     /* background-color: turquoise; */
-    margin: 0 !important;
+    margin: 40px 0px 0px 0px !important;
     padding: 2px !important;
 }
 #barChart{
@@ -64,6 +65,7 @@ th{
     border: 0 !important;
 }
 #horizontalBar{
+    height: 500px !important;
     width: 100% !important;
 }
 #carouselExampleControls{
@@ -85,8 +87,8 @@ th{
     margin: 0px !important;
 }
 #mainContent{
-    background-color: darkslategray;
-    height: 100% !important;
+    background-color: rgb(159, 173, 255);
+    height: 93vh !important;
     width: 90vw !important; 
     padding: 0px !important;
     margin: 0px !important;
@@ -96,14 +98,17 @@ th{
     width: 100%;
 }
 .carousel-item{
-    height: 250px !important;
+    /* height: 350px !important; */
+    margin: 0px 0 50px 0 !important;
 }
 #horizontalBar{
-    height: 300px !important;
+    height: 400px !important;
+    width: 90% !important;
 }
 #barChart{
     height: 250px !important;
 }
 #pieChart{
-    height: 250px !important;
+    height: 200px !important;
+    padding: 0% 10% !important;
 }

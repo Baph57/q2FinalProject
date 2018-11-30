@@ -181,19 +181,59 @@
                 var myBarChart = new Chart(ctxB, {
                   type: 'bar',
                   data: {
+                    "labels": ["Cash Flow", "Housing", "Transport", "Education", "Personal", "Savings"],
+                    "datasets": [{
+                      "label": "Financial Overview",
+                      "data": [
+                        data12.Monthly_Income + data12.Other_Income,
+                        data12.Housing_payment + data12.Home_Insurance + data12.Repairs + data12.Utilities + data12.Cable + data12.Pet_Supply + data12.Taxes_Paid,
+                        data12.auto_Payment + data12.car_Insurance + data12.Gas + data12.car_Repair,
+                        data12.School_Supplies + data12.Higher_Edu_Loans + data12.Tuition,
+                        data12.Groceries + data12.eating_Out + data12.Entertainment + data12.Personal_Other,
+                        data12.Emergency_Fund + data12.Retirement_Savings + data12.Investments],
+                      "fill": false,
+                      "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
+                        "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)",
+                        "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"
+                      ],
+                      "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)",
+                        "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"
+                      ],
+                      "borderWidth": 1
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                          beginAtZero: true
+                        }
+                      }]
+                    }
+                  }
+                });
+              </script>
+            </canvas>
+          </div>
+          <div class='col-6'>
+            <canvas id="horizontalBar">
+              <script>
+                new Chart(document.getElementById("horizontalBar"), {
+                  "type": "horizontalBar",
+                  "data": {
                     labels: [
-                    "School Supplies",
-                    "car_Insurance",
-                    "Retirement Savings", 
-                    "Investments", 
-                    "Utilities", 
-                    "Education Debt", 
-                    "Groceries", 
-                    "Taxes Paid", 
-                    "Auto Payment", 
-                    "Restaurant Expenditure", 
-                    "Housing Payment", 
-                    "Pet Expenditure"],
+                      "School Supplies",
+                      "car_Insurance",
+                      "Retirement Savings",
+                      "Investments",
+                      "Utilities",
+                      "Education Debt",
+                      "Groceries",
+                      "Taxes Paid",
+                      "Auto Payment",
+                      "Restaurant Expenditure",
+                      "Housing Payment",
+                      "Pet Expenditure"],
                     datasets: [{
                       label: "Expenses",
                       data: [
@@ -241,46 +281,6 @@
                       borderWidth: 1
                     }]
                   },
-                  options: {
-                    scales: {
-                      yAxes: [{
-                        ticks: {
-                          beginAtZero: true
-                        }
-                      }]
-                    }
-                  }
-                });
-              </script>
-            </canvas>
-          </div>
-          <div class='col-6'>
-            <canvas id="horizontalBar">
-              <script>
-                new Chart(document.getElementById("horizontalBar"), {
-                  "type": "horizontalBar",
-                  "data": {
-                    "labels": ["Cash Flow", "Housing", "Transport", "Education", "Personal", "Savings"],
-                    "datasets": [{
-                      "label": "Financial Overview",
-                      "data": [
-                      data12.Monthly_Income + data12.Other_Income,
-                      data12.Housing_payment + data12.Home_Insurance + data12.Repairs + data12.Utilities + data12.Cable + data12.Pet_Supply + data12.Taxes_Paid, 
-                      data12.auto_Payment + data12.car_Insurance + data12.Gas + data12.car_Repair, 
-                      data12.School_Supplies + data12.Higher_Edu_Loans + data12.Tuition, 
-                      data12.Groceries + data12.eating_Out + data12.Entertainment + data12.Personal_Other, 
-                      data12.Emergency_Fund + data12.Retirement_Savings + data12.Investments],
-                      "fill": false,
-                      "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
-                        "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)",
-                        "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"
-                      ],
-                      "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)",
-                        "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"
-                      ],
-                      "borderWidth": 1
-                    }]
-                  },
                   "options": {
                     "scales": {
                       "xAxes": [{
@@ -326,6 +326,36 @@
             </canvas>
           </div>
           <div class='col-6'>
+          </div>
+        </div>
+        <div class='row' id='bot3rd'>
+          <div class='col-6'>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_29880"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+    new TradingView.widget(
+      {
+        "width": 500,
+        "height": 300,
+        "symbol": "CBOE:OEX",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "Dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "allow_symbol_change": true,
+        "container_id": "tradingview_29880"
+      }
+    );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+          </div>
+          <div class='col-5'>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -347,56 +377,6 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
-          </div>
-        </div>
-        <div class='row' id='bot3rd'>
-          <div class='col-6'>
-            <!-- TradingView Widget BEGIN -->
-            <div class="tradingview-widget-container">
-              <div id="tradingview_61907"></div>
-              <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener"
-                  target="_blank"><span class="blue-text">AAPL chart</span></a> by TradingView</div>
-              <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-              <script type="text/javascript">
-                new TradingView.widget(
-                  {
-                    "width": 500,
-                    "height": 250,
-                    "symbol": "NASDAQ:AAPL",
-                    "interval": "D",
-                    "timezone": "Etc/UTC",
-                    "theme": "Dark",
-                    "style": "1",
-                    "locale": "en",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "allow_symbol_change": true,
-                    "container_id": "tradingview_61907"
-                  }
-                );
-              </script>
-            </div>
-            <!-- TradingView Widget END -->
-          </div>
-          <div class='col-5'>
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col"><h6>Articles</h6></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1. Put a working link here</th>
-                </tr>
-                <tr>
-                  <th scope="row">2. Put a working link here</th>
-                </tr>
-                <tr>
-                  <th scope="row">3. Put a working link here</th>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>

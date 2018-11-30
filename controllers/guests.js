@@ -60,7 +60,7 @@ module.exports = {
               console.log(x, '<-- x')
               console.log(x[0], '<-- x[0]')
             if(x[0] == undefined) {
-              res.render('register2')
+              res.render('register2', {x:x})
             } else {
               console.log('profile route')
               res.render("profile", {money: x})
